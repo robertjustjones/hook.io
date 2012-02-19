@@ -7,7 +7,7 @@ var hookPath;
 var path = require('path');
 
 if (argv['src']) {
-  hookPath = path.resolve(argv['src']);
+  hookPath = require.resolve(argv['src']);
 }
 
 if (argv['hook-type']) {
