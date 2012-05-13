@@ -6,12 +6,12 @@ var hookPath;
 
 var path = require('path');
 
-if (argv['src']) {
-  hookPath = require.resolve(argv['src']);
+if (argv['hook-type']) {
+  hookPath = argv['hook-type'];
 }
 
-if (argv['hook-type']) {
-  hookPath = 'hook.io-' + argv['hook-type'];
+if (argv['hook-src']) {
+  hookPath = require.resolve(argv['hook-src']);
 }
 
 var Hook = require(hookPath);
